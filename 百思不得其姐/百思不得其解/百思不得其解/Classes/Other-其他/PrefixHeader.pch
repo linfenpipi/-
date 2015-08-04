@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  百思不得其解
+//
+//  Created by 孙寅 on 15/7/22.
+//  Copyright (c) 2015年 孙寅. All rights reserved.
+//
+
+#ifndef _______PrefixHeader_pch
+#define _______PrefixHeader_pch
+
+#import "UIView+SYExtension.h"
+#import "UIBarButtonItem+SYExtension.h"
+#import "SYConst.h"
+#import "NSDate+SYExtension.h"
+
+#ifdef DEBUG
+#define SYLog(...) NSLog(__VA_ARGS__)
+#else
+#define SYLog(...)
+#endif
+
+#define SYLogFunc SYLog(@"%s", __func__)
+
+#define SYRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+
+#define SYGlobalBg SYRGBColor(233,233,233);
+
+#endif

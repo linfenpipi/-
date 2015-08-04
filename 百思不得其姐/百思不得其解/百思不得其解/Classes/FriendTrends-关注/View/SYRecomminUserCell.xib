@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user" rowHeight="119" id="KGk-i7-Jjw" customClass="SYRecomminUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XD0-x9-uyj">
+                        <rect key="frame" x="28" y="39" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="fdS-tf-mEy"/>
+                            <constraint firstAttribute="height" constant="40" id="oQF-xp-MKf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxh-CF-vmH">
+                        <rect key="frame" x="88" y="34" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-5H-Vh6">
+                        <rect key="frame" x="88" y="67" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQZ-XZ-zca">
+                        <rect key="frame" x="300" y="45" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="dUb-n6-iEE"/>
+                            <constraint firstAttribute="height" constant="30" id="ysI-8M-ILv"/>
+                        </constraints>
+                        <state key="normal" title="+ 关注">
+                            <color key="titleColor" red="1" green="0.2621180092" blue="0.22081115330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="XD0-x9-uyj" secondAttribute="centerY" id="2cv-Zs-QKs"/>
+                    <constraint firstItem="TBg-5H-Vh6" firstAttribute="bottom" secondItem="XD0-x9-uyj" secondAttribute="bottom" constant="4.5" id="84z-5v-3oi"/>
+                    <constraint firstItem="TBg-5H-Vh6" firstAttribute="leading" secondItem="XD0-x9-uyj" secondAttribute="trailing" constant="20" id="BWv-AN-bnd"/>
+                    <constraint firstItem="XD0-x9-uyj" firstAttribute="top" secondItem="Nxh-CF-vmH" secondAttribute="top" constant="5.5" id="Ij6-lY-Uxt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tQZ-XZ-zca" secondAttribute="trailing" constant="24" id="SNf-Dj-pi8"/>
+                    <constraint firstAttribute="centerX" secondItem="XD0-x9-uyj" secondAttribute="centerX" id="XGc-P5-hpb"/>
+                    <constraint firstAttribute="centerY" secondItem="tQZ-XZ-zca" secondAttribute="centerY" id="iJJ-cs-pjK"/>
+                    <constraint firstItem="XD0-x9-uyj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="kai-qc-om1"/>
+                    <constraint firstItem="Nxh-CF-vmH" firstAttribute="leading" secondItem="XD0-x9-uyj" secondAttribute="trailing" constant="20" id="yLq-Ei-Hcs"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="XGc-P5-hpb"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fansCountLable" destination="TBg-5H-Vh6" id="ORc-is-1Sf"/>
+                <outlet property="headerImageView" destination="XD0-x9-uyj" id="lPX-Jx-PdU"/>
+                <outlet property="screenNameLable" destination="Nxh-CF-vmH" id="7w6-rq-Uwi"/>
+            </connections>
+            <point key="canvasLocation" x="414" y="224.5"/>
+        </tableViewCell>
+    </objects>
+</document>
